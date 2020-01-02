@@ -45,4 +45,13 @@ dim(mpg_sub)
 
 # 05. iris 데이터셋을 대상으로 8:2비율로 sampling하여 train과 test 셋을 만드시오.
 
+idx <- sample(nrow(iris),nrow(iris)*0.8)
+train <- iris[idx, ]
+test <- iris[-idx, ]
+dim(test)
+
+
+
+
+
 
