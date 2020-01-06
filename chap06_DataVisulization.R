@@ -105,7 +105,7 @@ plot(WWWusage)
 install.packages("HistData")
 library(HistData)
 
-library(hep="HistData")
+library(help="HistData")
 
 ?HistData
 

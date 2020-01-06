@@ -125,7 +125,7 @@ prop.test(c(110,135),c(150,150), alternative="less", conf.level=0.95)
 # 2-2. 두 집단 평균차이 검정 
 
 # 1) 실습파일 가져오기
-data <- read.csv("two_sample.csv", header=TRUE)
+data <- read.csv("data/two_sample.csv", header=TRUE)
 data 
 print(data)
 head(data) #4개 변수 확인

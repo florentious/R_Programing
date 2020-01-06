@@ -3,7 +3,7 @@
 # 실습 데이터 파일 가져오기
 getwd()
 setwd("data")
-dataset <- read.csv("dataset.csv")
+dataset <- read.csv("data/dataset.csv")
 str(dataset)
 
 
