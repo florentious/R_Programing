@@ -23,7 +23,7 @@ y <- product$"제품_만족도"
 df <- data.frame(x,y)
 
 # 2) 회귀모델 생성 : lm
-model <- lm(y~x, data=df)
+model <- lm(y~x, data=df) #y~x : formula
 model
 # Coefficients: 회귀계수 (기울기, 절편)
 # intercept : 절편, x : 기울기
@@ -60,11 +60,11 @@ model$fitted.values #예측치에 대한 값을 vector형태로 가지고 있음
 summary(model)  # 분석용도로 summary 씀, 분산분석과 비슷
 
 # <회귀모델 분석 순서>
-# 1. F검정 : 모델의 유의성 검정
+# 1. F검정(-1.96~+1.96) : 모델의 유의성 검정(귀무가설을 채택역을 벗어난 값이 p<0.05)
 #   검정통계량 374, 자유도 262
 #   p-value: < 2.2e-16 <0.05 통계적으로 유의하다
 # 2. 모델의 설명력(조절의 설명력 : Adjusted R-squared:  0.5865) - 1에가까울수록 설명을 잘하고 있다.
-# 3. x 변수 유의성 검정
+# 3. x 변수 유의성 검정(t검정 통계량)
 #    - t-value 가 0.05 이하면 영향력, intercept의 * 개수로 영향력을 가시적 확인가능(많을수록 많음)
 #    - p-value < 0.05
 
@@ -89,6 +89,7 @@ abline(model, col="red")
 
 install.packages("car")
 library(car)
+library(help=car)
 
 Prestige
 str(Prestige)
@@ -116,6 +117,10 @@ model <- lm(income ~ education + women + prestige, data=newData); # 다중 선�
 model # Coefficients: 계수값을 가지고 음과 양이 관계를 확인해 볼 수 있다.
 
 head(newData)
+
+# Y = (x1*a1 + X2*a2 + X3*a3) + b
+# (pyton에서) Y = matmul*(X,a) + b ## matmul 행렬 곱 함수
+# (R에서) Y = (X %*% a) + b
 
 income <- 12351     # 예측치
 education <- 13.11  # x1

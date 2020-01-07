@@ -221,6 +221,7 @@ x <- iris$Species
 y <- iris$Sepal.Length
 
 chisq.test(x,y)  # 집단 변수, 연속형 변수
+#chisq.test(iris$Species, iris$Sepal.Length)
 
 # p-value = 6.666e-09 < 0.05 이기때문에 귀문가설 기각각
 # [해설] 꽃의 종별로 꽃받침의 길이에 따라 차이가 있다고 볼수 있다.

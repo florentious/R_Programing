@@ -116,9 +116,9 @@ t <- table(y_true,cPred) #교차분할표(confusion matrix)
 acc <- (90+13) / sum(t)   # 정분류/전체체
 cat('accuray =', acc) # accuray = 0.9449541 정확도
 
-# 특이도(Specificity) : No -> No 실제 정답이 No인 경우 No가 나오는 경우
+# 특이도(Specificity) : No -> No //실제 정답이 No인 경우 No가 나오는 경우
 Specificity <- 90 / 92
-# 재현율(Recall : 민감도) : Yes-> Yes 실제 정답이 Yes인 경우 Yes가 나오는 경우
+# 재현율(Recall : 민감도) : Yes-> Yes //실제 정답이 Yes인 경우 Yes가 나오는 경우
 recall <- 10 / 17 # 0.5882353
 
 # 정확률(Precision) : model(yes) -> 10/12
